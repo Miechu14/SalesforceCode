@@ -1,0 +1,26 @@
+<template>
+    <template if:true={labelText}>
+        <div class="slds-notify slds-notify_alert slds-theme_warning banner" role="alert">
+            <span class="slds-assistive-text">Warning</span>
+            <span class="slds-icon_container slds-icon-utility-warning" title="Warning">
+                <lightning-icon
+                    icon-name="utility:warning"
+                    alternative-text="Warning"
+                    size="small">
+                </lightning-icon>
+            </span>
+            <div class="slds-notify__content">
+                <h2>{labelText}</h2>
+            </div>
+        </div>
+    </template>
+
+    <template if:true={error}>
+        <div class="slds-notify slds-notify_alert slds-theme_error banner" role="alert">
+            <span class="slds-assistive-text">Error</span>
+            <div class="slds-notify__content">
+                <h2>{error}</h2>
+            </div>
+        </div>
+    </template>
+</template>
