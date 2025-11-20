@@ -1,5 +1,5 @@
 import { LightningElement, api, wire } from 'lwc';
-import getLabel from '@salesforce/apex/customWarningBannerController.getLabel';
+import getLabel from '@salesforce/apex/CustomWarningBannerController.getLabel';
 
 export default class customWarningBanner extends LightningElement {
     @api labelApiName;
@@ -9,9 +9,6 @@ export default class customWarningBanner extends LightningElement {
     //error handling for label loading
     @wire(getLabel, { labelApiName: '$labelApiName' })
     wiredLabel({ data, error }) {
-        console.log('customWarningBanner – labelApiName =', this.labelApiName);
-        console.log('customWarningBanner – data =', data, ' error =', error);
-
         if (data) {
             this.labelText = data;
             this.error = undefined;

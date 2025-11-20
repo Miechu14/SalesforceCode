@@ -1,5 +1,5 @@
 @isTest
-private class customWarningBannerControllerTest {
+private class CustomWarningBannerControllerTest {
     @isTest
     static void getLabel_ReturnsNull() {
             string resultNull = customWarningBannerController.getLabel(null);

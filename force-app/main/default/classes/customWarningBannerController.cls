@@ -2,7 +2,7 @@
     Custom Warning Banner Controller
     This Apex class retrieves custom labels based on the user's language settings.
 */
-public with sharing class customWarningBannerController {
+public with sharing class CustomWarningBannerController {
 
     @AuraEnabled(cacheable=true)
     public static String getLabel(String labelApiName) {
